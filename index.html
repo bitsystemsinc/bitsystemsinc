@@ -42,10 +42,7 @@
             <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="container nav-container">
             <div class="logo">Plaintext</div>
-            <button class="hamburger" id="hamburger-menu" aria-label="Open navigation" aria-controls="nav-links" aria-expanded="false" style="display:none;">
-                <span style="font-size:2rem;">&#9776;</span>
-            </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#solutions">Solutions</a></li>
                 <li><a href="#pillars">Our Focus</a></li>
                 <li><a href="#why-us">Why Us</a></li>
@@ -177,30 +174,7 @@
         </div>
     </section>
 
-    <!-- Resources Section (hidden for now)
-    <section id="resources" class="resources">
-        <div class="container">
-            <h2>Resources & Learning</h2>
-            <div class="resources-grid">
-                <a href="#" class="resource-card">
-                    <h3>Documentation</h3>
-                    <p>Comprehensive guides for implementing Plaintext solutions in your enterprise.</p>
-                </a>
-                <a href="#" class="resource-card">
-                    <h3>Case Studies</h3>
-                    <p>Real-world examples of organizations transforming operations with our platforms.</p>
-                </a>
-                <a href="#" class="resource-card">
-                    <h3>Technical Whitepaper</h3>
-                    <p>Deep dive into our AI-native architecture and design principles.</p>
-                </a>
-                <a href="#" class="resource-card">
-                    <h3>Research</h3>
-                    <p>Our latest findings on agentic AI, security, and enterprise transformation.</p>
-                </a>
-            </div>
-        </div>
-    </section>
+   
 
     <!-- CTA Section -->
     <section id="contact" class="cta-section" aria-labelledby="contact-heading">
@@ -255,36 +229,5 @@
     </footer>
 
         <script src="script.js"></script>
-        <script>
-            // Hamburger menu logic only
-            const hamburger = document.getElementById('hamburger-menu');
-            const navLinks = document.querySelector('.nav-links');
-            function toggleMenu() {
-                const isOpen = navLinks.classList.toggle('open');
-                hamburger.setAttribute('aria-expanded', isOpen);
-            }
-            hamburger.addEventListener('click', toggleMenu);
-            // Close menu when clicking outside (mobile only)
-            document.addEventListener('click', function(e) {
-                if (window.innerWidth <= 900 && navLinks.classList.contains('open')) {
-                    if (!navLinks.contains(e.target) && e.target !== hamburger) {
-                        navLinks.classList.remove('open');
-                        hamburger.setAttribute('aria-expanded', false);
-                    }
-                }
-            });
-            // Hide hamburger on desktop
-            function updateHamburgerVisibility() {
-                if (window.innerWidth <= 900) {
-                    hamburger.style.display = 'block';
-                } else {
-                    hamburger.style.display = 'none';
-                    navLinks.classList.remove('open');
-                    hamburger.setAttribute('aria-expanded', false);
-                }
-            }
-            window.addEventListener('resize', updateHamburgerVisibility);
-            updateHamburgerVisibility();
-        </script>
-</body>
+
 </html>

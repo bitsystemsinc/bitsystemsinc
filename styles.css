@@ -1,44 +1,4 @@
 /* ============================================
-     MOBILE NAVIGATION (HAMBURGER)
-     ============================================ */
-@media (max-width: 900px) {
-    .hamburger {
-        display: block !important;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-        order: 2;
-    }
-    .logo {
-        order: 1;
-    }
-    .nav-links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: #fff;
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 4.5rem 1rem 2rem 1rem;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-        z-index: 2000;
-        display: none;
-        min-height: 100vh;
-        align-items: flex-start;
-    }
-    .nav-links.open {
-        display: flex;
-    }
-    .nav-container {
-        flex-wrap: nowrap;
-    }
-    body[data-theme="dark"] .nav-links {
-        background: #222;
-    }
-}
-/* ============================================
      RESPONSIVE DESIGN
      ============================================ */
 @media (max-width: 900px) {
@@ -47,16 +7,6 @@
     }
     .navbar {
         padding: 0.5rem 1rem;
-    }
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-        padding: 1rem 0.5rem;
-    }
-    .nav-links {
-        gap: 1.25rem;
-        flex-wrap: wrap;
     }
     .theme-selector {
         margin-left: 0;
